@@ -8,7 +8,7 @@ The `App-AutoScaler` provides the capability to adjust the computation resources
 The `App-AutoScaler` has the following components:
 
 * `api` : provides public APIs to manage scaling policy
-* `servicebroker`: implements the [Cloud Foundry service broker API][k]
+* `servicebroker`: implements the [Cloud Foundry service broker API](http://docs.cloudfoundry.org/services/api.html)
 * `metricsgateway` : collects and filters loggregator events via loggregator v2  API
 * `metricsserver`: transforms loggregator events to app-autoscaler performance metrics ( metricsgateway + metricsserver is a replacement of metricscollector)
 * `metricsforwarder`: receives and forwards custom metrics to loggregator via v2 ingress API
@@ -22,8 +22,8 @@ The `App-AutoScaler` has the following components:
 
 * Java 11 or above
 * Docker
-* [Apache Maven][b] 3
-* [Cloud Foundry cf command line][f] 7 or 8
+* [Apache Maven](https://maven.apache.org/) 3
+* [Cloud Foundry cf command line](https://github.com/cloudfoundry/cli/releases) 7 or 8
 * Go 1.17 or above
 
 ### Database requirement
@@ -364,30 +364,16 @@ scheduler|https://autoscaler-scheduler.((system_domain))/health|scheduler|/autos
 
 These endpoints can be disabled by using the ops file `example/operations/disable-basicauth-on-health-endpoints.yml`
 
-You can follow the development progress on [Pivotal Tracker][t].
+You can follow the development progress on [Pivotal Tracker](https://www.pivotaltracker.com/projects/1566795).
 
 ## Deploy and offer Autoscaler as a service
 
-Go to [app-autoscaler-release][r] project for how to BOSH deploy `App-AutoScaler`
+Go to [app-autoscaler-release](https://github.com/cloudfoundry/app-autoscaler-release) project for how to BOSH deploy `App-AutoScaler`
 
 ## Use Autoscaler service
 
-Refer to [user guide][u] for the details of how to use the Auto-Scaler service, including policy definition, supported metrics, public API specification and command line tool.
+Refer to [user guide](docs/Readme.md) for the details of how to use the Auto-Scaler service, including policy definition, supported metrics, public API specification and command line tool.
 
 ## License
 
-This project is released under version 2.0 of the [Apache License][l].
-
-
-[b]: https://maven.apache.org/
-[c]: http://couchdb.apache.org/
-[d]: http://www.eclipse.org/m2e/
-[e]: http://www.cloudant.com
-[f]: https://github.com/cloudfoundry/cli/releases
-[k]: http://docs.cloudfoundry.org/services/api.html
-[l]: LICENSE
-[t]: https://www.pivotaltracker.com/projects/1566795
-[p]: https://www.postgresql.org/
-[r]: https://github.com/cloudfoundry/app-autoscaler-release
-[u]: docs/Readme.md
-[m]: https://www.mysql.com/
+This project is released under version 2.0 of the [Apache License](LICENSE).
