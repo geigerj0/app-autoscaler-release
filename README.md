@@ -19,12 +19,7 @@ The `App-AutoScaler` has the following components:
 ## Development
 
 ### System requirements
-
-* Java 11 or above
-* Docker
-* [Apache Maven](https://maven.apache.org/) 3
-* [Cloud Foundry cf command line](https://github.com/cloudfoundry/cli/releases) 7 or 8
-* Go 1.17 or above
+Use [Nix](https://nix.dev/install-nix.html) (see [flake.nix](flake.nix)) or [asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf) ([.tool-versions](.tool-versions)) to setup the local environment. Also, make sure [Docker](https://docs.docker.com/engine/install/) is installed.
 
 ### Database requirement
 
